@@ -264,7 +264,26 @@ public TimeSpan time_Left;
 
 ## Abbreviations
 
+- Avoid using abbreviations except abbreviations commonly used in names such as Id, Xml, Ftp, Uri etc.
+- PascalCase applies to abbreviations longer than 2 characters.
+
+```csharp
+//Good
+UserGroup userGroup;
+Assignment employeeAssignment;
+//Bad
+UserGroup usrGrp;
+Assignment empAssignment;
+// Exceptions
+CustomerId customerId;
+XmlDocument xmlDocument;
+FtpHelper ftpHelper;
+UriPart uriPart;
+```
+
 ## Methods
+
+-[]
 
 -[9.1](#methods--naming) **Naming**:
 
