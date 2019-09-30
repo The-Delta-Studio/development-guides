@@ -35,7 +35,7 @@
 
 - Single word primitives are declared with no caps.
 - Multiple word primitives are declared as descriptive as possible with meaningful names.
-- Boolean primitives are declared with the "any", "has" and "is" keywords
+- Boolean primitives are declared with the "any", "has" and "is" keywords.
 
 -[2.1.2](#types--primitives--case) **Case**:
 
@@ -139,7 +139,20 @@ namespace Product.Layer.Module.Group
 
 ## Objects
 
--[4.1](#objects--creation) **Creation**:
+-[4.1](#objects--naming) **Naming**:
+
+- Single word objects are named with an uppercase.
+- Multiple word objects are declared as descriptive as possible with meaningful names.
+
+-[4.2](@objects--case) **Case**:
+
+Use PascalCase when naming objects.
+
+```csharp
+var userAddressDetails = new UserAddressDetails();
+```
+
+-[4.3](#objects--creation) **Creation**:
 
 Use object intialisers to simplify object creation.
 
