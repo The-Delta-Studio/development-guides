@@ -4,11 +4,13 @@
 
 1. [Convention Table](#convention-table)
 2. [Types](#types)
-3. [Objects](#objects)
-4. [Classes](#classes)
-5. [Interfaces](#interfaces)
-6. [Declerations](#declerations)
-7. [Abbreviations](#abbreviations)
+3. [Namespaces](#namespaces)
+4. [Objects](#objects)
+5. [Classes](#classes)
+6. [Interfaces](#interfaces)
+7. [Declerations](#declerations)
+8. [Abbreviations](#abbreviations)
+9. [Methods](#methods)
 
 ## Convetion Table
 
@@ -24,7 +26,6 @@
 | Properties name  | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Delegate name    | PascalCase |    128 | No     | No     | Yes    | Yes          | [A-z]      | No          |
 | Enum type name   | PascalCase |    128 | Yes    | No     | No     | No           | [A-z]      | No          |
-
 
 ## Types
 
@@ -55,18 +56,88 @@ Dictionary customers = new Dictionary();
 
 > Why: Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
 
-## Objects
-## Classes
--[3.1](#classes--naming)
+## Namespaces
 
+-[3.1](#namespaces--naming) **Naming**: Organize namespaces with a clearly defined hierarchy
+
+```csharp
+// Examples
+namespace Company.Product.Module.SubModule
+{
+}
+namespace Product.Module.Component
+{
+}
+namespace Product.Layer.Module.Group
+{
+}
+```
+
+## Objects
+
+## Classes
+
+-[5.1](#classes--naming) **Naming**:
+
+```csharp
+
+```
+
+-[5.2](#classes--case) **Case**:
+
+```csharp
+
+```
 
 ## Interfaces
+
+-[6.1](#interfaces--naming) **Naming**:
+
+```csharp
+
+```
+
+-[6.2](#interfaces--case) **Case**:
+
+```csharp
+
+```
+
 ## Declerations
+
 ## Abbreviations
 
+## Methods
 
+-[9.1](#methods--naming) **Naming**:
 
+```csharp
 
+```
+
+-[9.2](#methods--case) **Case**:
+
+```csharp
+
+```
+
+-[9.3](#methods--arguments) **Case**:
+
+```csharp
+
+```
+
+-[9.3.1](#methods--arguments--naming) **Naming**
+
+```csharp
+
+```
+
+-[9.3.2](#methods--arguments--case) **Case**
+
+```csharp
+
+```
 
 #### 1. Do use PascalCasing for class names and method names:
 
