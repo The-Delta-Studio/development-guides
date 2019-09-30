@@ -152,6 +152,8 @@ Use PascalCase when naming objects.
 var userAddressDetails = new UserAddressDetails();
 ```
 
+> Why? Consistent with the Microsoft's .NET Framework and easy to read.
+
 -[4.3](#objects--creation) **Creation**:
 
 Use object intialisers to simplify object creation.
@@ -175,15 +177,11 @@ user.Email = "dirk@thedelta.io";
 
 -[5.1](#classes--naming) **Naming**:
 
-```csharp
-
-```
+Naming convention is the same as for Objects.
 
 -[5.2](#classes--case) **Case**:
 
-```csharp
-
-```
+Case sensitivity is the same as for Objects.
 
 ## Interfaces
 
@@ -206,6 +204,8 @@ public interface IUserAssetholdingService()
   void Method();
 }
 ```
+
+> Why? Consistent with the Microsoft's .NET Framework and easy to read.
 
 -[6.2](#interfaces--case) **Case**:
 
