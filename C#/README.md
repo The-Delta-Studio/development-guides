@@ -8,7 +8,7 @@
 4. [Objects](#objects)
 5. [Classes](#classes)
 6. [Interfaces](#interfaces)
-7. [Declerations](#declerations)
+7. [Identifiers](#identifiers)
 8. [Abbreviations](#abbreviations)
 9. [Methods](#methods)
 
@@ -29,7 +29,22 @@
 
 ## Types
 
--[2.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+-[2.1](#types--primitives) **Primitives**:
+
+-[2.1.1](#types--primitives--naming) **Naming**:
+
+- Single word primitives are declared with no caps.
+- Multiple word primitives are declared as descriptive as possible.
+- Boolean primitives are declared with the "any", "has" and "is" keywords
+
+-[2.1.2](#types--primitives--case) **Case**:
+
+- Single word primitive variables are declared with lower case
+- Multiple word primitive variables are declared in camelCase
+
+-[2.1.3](#types--primitives--decleration) **Decleration**:
+
+Primitive types are declared using their type and not a reference to their type.
 
 ```csharp
 //Good
@@ -41,6 +56,22 @@ bool isCompleted;
 var index = 100;
 var timeSheet;
 ```
+
+-[2.1.4](#types--primitives--access) **Access**:
+
+When accessing a type's static members use the .NET Framework type names
+
+```csharp
+//Good
+string commaSeparatedNames = String.Join(", ", names);
+int index = Int32.Parse(input);
+
+//Bad
+string commaSeparatedNames = string.Join(", ", names);
+int index = int.Parse(input);
+```
+
+> Why? Consistent with the Microsoft's .NET Framework and makes code more natural to read.
 
 -[2.2](#types--complex) **Complex**: When you access a complex type you work on a reference to its value.
 
@@ -103,7 +134,7 @@ namespace Product.Layer.Module.Group
 
 ```
 
-## Declerations
+## Identifiers
 
 ## Abbreviations
 
