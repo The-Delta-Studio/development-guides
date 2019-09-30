@@ -11,6 +11,9 @@
 7. [Identifiers](#identifiers)
 8. [Abbreviations](#abbreviations)
 9. [Methods & Constructors](#methods--constructors)
+10. [Enums](#enums)
+11. [Miscellaneous](#miscellaneous)
+12. [Resources](#resources)
 
 ## Convetion Table
 
@@ -70,6 +73,8 @@ string strName;
 ```
 
 > Why? Consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy.
+
+**[⬆ back to top](#table-of-contents)**
 
 -[2.1.4](#types--primitives--access) **Access**:
 
@@ -136,6 +141,8 @@ namespace Product.Layer.Module.Group
 {
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Objects
 
@@ -239,11 +246,22 @@ Case sensitivity is the same as for classes except for the prefix I.
 
 ```csharp
 //Good
-public interface IUserAssetholdingService() {}
+public interface IUserAssetholdingService()
+{
+
+}
 //Bad
-public interface Iuserassetholdingservice() {}
-public interface iUserAssetholdingService() {}
+public interface Iuserassetholdingservice()
+{
+
+}
+public interface iUserAssetholdingService()
+{
+
+}
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Identifiers
 
@@ -283,6 +301,8 @@ FtpHelper ftpHelper;
 UriPart uriPart;
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Methods & Constructors
 
 -[9.1](#methods--constructors--naming) **Naming**:
@@ -318,10 +338,9 @@ public decimal calculateWeightedAverageCost(decimal unitBalance, decimal transac
 
 -[9.3](#methods--constructors--arguments) **Arguments**:
 
--[9.3.1](#methods--constructors--arguments--naming) **Naming**
-
 - Do not name arguments such that only the case is different.
 - Arguments can be abbreviated.
+- Arguments are in camelCase.
 
 ```csharp
 //Good
@@ -352,262 +371,15 @@ private void SomeFunction(string name, string Name)
 }
 ```
 
--[9.3.2](#methods--constructors--arguments--case) **Case**
-
-Arguments are in camelCase.
-
-```csharp
-
-```
-
-#### 1. Do use PascalCasing for class names and method names:
-
-```csharp
-public class ClientActivity
-{
-  public void ClearStatistics()
-  {
-    //...
-  }
-  public void CalculateStatistics()
-  {
-    //...
-  }
-}
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
+> Why? Consistent with the Microsoft's .NET Framework and easy to read, and also excludes possibility of occurrence of conflict situations.
 
 **[⬆ back to top](#table-of-contents)**
 
-#### 2. Do use camelCasing for method arguments and local variables:
+## Enum
 
-```csharp
-public class UserLog
-{
-  public void Add(LogEvent logEvent)
-  {
-    int itemCount = logEvent.Items.Count;
-    // ...
-  }
-}
-```
+-[10.1](#enums--naming) **Naming**:
 
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
-
-#### 3. Do not use Hungarian notation or any other type identification in identifiers
-
-```csharp
-// Correct
-int counter;
-string name;
-// Avoid
-int iCounter;
-string strName;
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy (via tooltips). In general you want to avoid type indicators in any identifier._**
-
-#### 4. Do not use Screaming Caps for constants or readonly variables:
-
-```csharp
-// Correct
-public const string ShippingType = "DropShip";
-// Avoid
-public const string SHIPPINGTYPE = "DropShip";
-```
-
-**_Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention._**
-
-**[⬆ back to top](#table-of-contents)**
-
-#### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
-
-```csharp
-var seattleCustomers = from customer in customers
-  where customer.City == "Seattle"
-  select customer.Name;
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
-
-#### 6. Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, Xml, Ftp, Uri.
-
-```csharp
-// Correct
-UserGroup userGroup;
-Assignment employeeAssignment;
-// Avoid
-UserGroup usrGrp;
-Assignment empAssignment;
-// Exceptions
-CustomerId customerId;
-XmlDocument xmlDocument;
-FtpHelper ftpHelper;
-UriPart uriPart;
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and prevents inconsistent abbreviations._**
-
-#### 7. Do use PascalCasing for abbreviations 3 characters or more (2 chars are both uppercase):
-
-```csharp
-HtmlHelper htmlHelper;
-FtpTransfer ftpTransfer;
-UIControl uiControl;
-```
-
-**_Why: consistent with the Microsoft's .NET Framework. Caps would grab visually too much attention._**
-
-#### 8. Do not use Underscores in identifiers. Exception: you can prefix private fields with an underscore:
-
-```csharp
-// Correct
-public DateTime clientAppointment;
-public TimeSpan timeLeft;
-// Avoid
-public DateTime client_Appointment;
-public TimeSpan time_Left;
-// Exception (Class field)
-private DateTime _registrationDate;
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and makes code more natural to read (without 'slur'). Also avoids underline stress (inability to see underline)._**
-
-**[⬆ back to top](#table-of-contents)**
-
-#### 9. Do use predefined type names (C# aliases) like `int`, `float`, `string` for local, parameter and member declarations. Do use .NET Framework names like `Int32`, `Single`, `String` when accessing the type's static members like `Int32.TryParse` or `String.Join`.
-
-```csharp
-// Correct
-string firstName;
-int lastIndex;
-bool isSaved;
-string commaSeparatedNames = String.Join(", ", names);
-int index = Int32.Parse(input);
-// Avoid
-String firstName;
-Int32 lastIndex;
-Boolean isSaved;
-string commaSeparatedNames = string.Join(", ", names);
-int index = int.Parse(input);
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and makes code more natural to read._**
-
-#### 11. Do use noun or noun phrases to name a class.
-
-```csharp
-public class Employee
-{
-}
-public class BusinessLocation
-{
-}
-public class DocumentCollection
-{
-}
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and easy to remember._**
-
-**[⬆ back to top](#table-of-contents)**
-
-#### 12. Do prefix interfaces with the letter I. Interface names are noun (phrases) or adjectives.
-
-```csharp
-public interface IShape
-{
-}
-public interface IShapeCollection
-{
-}
-public interface IGroupable
-{
-}
-```
-
-**_Why: consistent with the Microsoft's .NET Framework._**
-
-#### 13. Do name source files according to their main classes. Exception: file names with partial classes reflect their source or purpose, e.g. designer, generated, etc.
-
-```csharp
-// Located in Task.cs
-public partial class Task
-{
-}
-// Located in Task.generated.cs
-public partial class Task
-{
-}
-```
-
-**_Why: consistent with the Microsoft practices. Files are alphabetically sorted and partial classes remain adjacent._**
-
-#### 14. Do organize namespaces with a clearly defined structure:
-
-```csharp
-// Examples
-namespace Company.Product.Module.SubModule
-{
-}
-namespace Product.Module.Component
-{
-}
-namespace Product.Layer.Module.Group
-{
-}
-```
-
-**_Why: consistent with the Microsoft's .NET Framework. Maintains good organization of your code base._**
-
-**[⬆ back to top](#table-of-contents)**
-
-#### 15. Do vertically align curly brackets:
-
-```csharp
-// Correct
-class Program
-{
-  static void Main(string[] args)
-  {
-    //...
-  }
-}
-```
-
-Add in single line return if
-
-```csharp
-  if(true)
-    return true;
-```
-
-**_Why: Microsoft has a different standard, but developers have overwhelmingly preferred vertically aligned brackets._**
-
-#### 16. Do declare all member variables at the top of a class, with static variables at the very top.
-
-```csharp
-// Correct
-public class Account
-{
-  public static string BankName;
-  public static decimal Reserves;
-  public string Number { get; set; }
-  public DateTime DateOpened { get; set; }
-  public DateTime DateClosed { get; set; }
-  public decimal Balance { get; set; }
-  // Constructor
-  public Account()
-  {
-    // ...
-  }
-}
-```
-
-**_Why: generally accepted practice that prevents the need to hunt for variable declarations._**
-
-#### 17. Do use singular names for enums. Exception: bit field enums.
+Non bitfield enums are named using a singular.
 
 ```csharp
 // Correct
@@ -632,22 +404,14 @@ public enum Dockings
 }
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework and makes the code more natural to read. Plural flags because enum can hold multiple values (using bitwise 'OR')._**
+> Why? Consistent with the Microsoft's .NET Framework and makes the code more natural to read. Plural flags because enum can hold multiple values (using bitwise 'OR').
 
-**[⬆ back to top](#table-of-contents)**
+-[10.2](#enums--declaration) **Declaration**:
 
-#### 18. Do not explicitly specify a type of an enum or values of enums (except bit fields):
+- Do not explicitly specify a type of an enum.
 
 ```csharp
-// Don't
-public enum Direction : long
-{
-  North = 1,
-  East = 2,
-  South = 3,
-  West = 4
-}
-// Correct
+//Good
 public enum Direction
 {
   North,
@@ -655,23 +419,23 @@ public enum Direction
   South,
   West
 }
+
+//Bad
+public enum Direction : long
+{
+  North = 1,
+  East = 2,
+  South = 3,
+  West = 4
+}
 ```
 
-**_Why: can create confusion when relying on actual types and values._**
+> Why? Can create confusion when relying on actual types and values..
 
-#### 19. Do not use an "Enum" suffix in enum type names:
+- Do not use an "Enum" suffix in enum type names.
 
 ```csharp
-// Don't
-public enum CoinEnum
-{
-  Penny,
-  Nickel,
-  Dime,
-  Quarter,
-  Dollar
-}
-// Correct
+//Good
 public enum Coin
 {
   Penny,
@@ -680,13 +444,21 @@ public enum Coin
   Quarter,
   Dollar
 }
+
+// Bad
+public enum CoinEnum
+{
+  Penny,
+  Nickel,
+  Dime,
+  Quarter,
+  Dollar
+}
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers._**
+> Why> Consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.
 
-**[⬆ back to top](#table-of-contents)**
-
-#### 20. Do not use "Flag" or "Flags" suffixes in enum type names:
+- Do not use "Flag" or "Flags" suffixes in enum type names.
 
 ```csharp
 // Don't
@@ -711,7 +483,39 @@ public enum Dockings
 }
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers._**
+> Why: Consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.
+
+## Miscellaneous
+
+-[11.1](#miscellaneous--brackets) **Vertical Allign Brackets**:
+
+```csharp
+//Good
+class Program
+{
+  static void Main(string[] args)
+  {
+  }
+}
+
+//Bad
+public class TradeException : Exception { public TradeException(string msg) : base(msg) { } }
+```
+
+> Why? Developers have overwhelmingly preferred vertically aligned brackets.
+
+-[11.2](#miscellaneous--if) **Ifs with one return**:
+
+Single line return if if statement has only one line.
+
+```csharp
+if(number > 1)
+  return true;
+```
+
+> Why? Looks cleaner.
+
+**[⬆ back to top](#table-of-contents)**
 
 #### 21. Do use suffix EventArgs at creation of the new classes comprising the information on event:
 
@@ -770,18 +574,7 @@ public class BarcodeReadException : System.Exception
 
 **_Why: consistent with the Microsoft's .NET Framework and easy to read._**
 
-#### 26. Do use suffix Any, Is, Have or similar keywords for boolean identifier :
-
-```csharp
-// Correct
-public static bool IsNullOrEmpty(string value) {
-    return (value == null || value.Length == 0);
-}
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
-
-## Offical Reference
+## Resources
 
 1. [MSDN General Naming Conventions](<http://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx>)
 2. [DoFactory C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards)
