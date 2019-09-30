@@ -10,7 +10,7 @@
 6. [Interfaces](#interfaces)
 7. [Identifiers](#identifiers)
 8. [Abbreviations](#abbreviations)
-9. [Methods](#methods)
+9. [Methods & Constructors](#methods--constructors)
 
 ## Convetion Table
 
@@ -143,6 +143,7 @@ namespace Product.Layer.Module.Group
 
 - Single word objects are named with an uppercase.
 - Multiple word objects are declared as descriptive as possible with meaningful names.
+- User noune or noun phrases to name an object.
 
 -[4.2](@objects--case) **Case**:
 
@@ -266,6 +267,7 @@ public TimeSpan time_Left;
 
 - Avoid using abbreviations except abbreviations commonly used in names such as Id, Xml, Ftp, Uri etc.
 - PascalCase applies to abbreviations longer than 2 characters.
+- Method arguments can be abbreviated.
 
 ```csharp
 //Good
@@ -281,35 +283,78 @@ FtpHelper ftpHelper;
 UriPart uriPart;
 ```
 
-## Methods
+## Methods & Constructors
 
--[]
+-[9.1](#methods--constructors--naming) **Naming**:
 
--[9.1](#methods--naming) **Naming**:
+Methods are named as descriptively as possible.
 
 ```csharp
+public string GetFirstNameOfUser(User user)
+{
+  return user.FirstName;
+}
+```
+
+-[9.2](#methods--constructors--case) **Case**:
+
+Methods use CamelCase.
+
+```csharp
+//Good
+public decimal CalculateWeightedAverageCost(decimal unitBalance, decimal transactionValue, decimal oldWAC)
+{
+  //
+}
+//Bad
+public decimal calculateWeightedAverageCost(decimal unitBalance, decimal transactionValue, decimal oldWAC)
+{
+  //
+}
 
 ```
 
--[9.2](#methods--case) **Case**:
+> Why? consistent with the Microsoft's .NET Framework and easy to read.
+
+-[9.3](#methods--constructors--arguments) **Arguments**:
+
+-[9.3.1](#methods--constructors--arguments--naming) **Naming**
+
+- Do not name arguments such that only the case is different.
+- Arguments can be abbreviated.
 
 ```csharp
+//Good
+public double CalculateAverage(double num1, double num2, double num3)
+{
+  return (num1 + num2 + num3) / 3;
+}
 
+public class User
+{
+  public string FirstName { get;set; }
+  public string LastName { get;set; }
+  public string Email { get;set; }
+  public int Age { get; set; }
+
+  public User(string nme, string surnme, string em, double dob)
+  {
+    FirstName = nme;
+    LastName = surnme;
+    Email = em;
+    Age = DateTime.Year - dob.Year
+  }
+}
+
+//Bad
+private void SomeFunction(string name, string Name)
+{
+}
 ```
 
--[9.3](#methods--arguments) **Case**:
+-[9.3.2](#methods--constructors--arguments--case) **Case**
 
-```csharp
-
-```
-
--[9.3.1](#methods--arguments--naming) **Naming**
-
-```csharp
-
-```
-
--[9.3.2](#methods--arguments--case) **Case**
+Arguments are in camelCase.
 
 ```csharp
 
