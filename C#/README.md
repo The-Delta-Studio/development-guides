@@ -189,14 +189,34 @@ user.Email = "dirk@thedelta.io";
 
 -[6.1](#interfaces--naming) **Naming**:
 
-```csharp
+Interfaces take the name of the class they are referencing prefixed with the letter I.
 
+```csharp
+public class UserAssetholdingService()
+{
+  public async void Method()
+  {
+
+  }
+  //
+}
+
+public interface IUserAssetholdingService()
+{
+  void Method();
+}
 ```
 
 -[6.2](#interfaces--case) **Case**:
 
-```csharp
+Case sensitivity is the same as for classes except for the prefix I.
 
+```csharp
+//Good
+public interface IUserAssetholdingService() {}
+//Bad
+public interface Iuserassetholdingservice() {}
+public interface iUserAssetholdingService() {}
 ```
 
 ## Identifiers
