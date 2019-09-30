@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-1. [Convention Table](#)
+1. [Convention Table](#convention-table)
+2. [Types](#types)
 
 ## Convetion Table
 
@@ -20,6 +21,35 @@
 | Enum type name   | PascalCase |    128 | Yes    | No     | No     | No           | [A-z]      | No          |
 
 #### 1. Do use PascalCasing for class names and method names:
+
+## Types
+
+-[1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+
+```csharp
+//Good
+int index = 100;
+string timeSheet;
+bool isCompleted;
+
+//Bad
+var index = 100;
+var timeSheet;
+```
+
+-[1.2](#types--complex) **Complex**: When you access a complex type you work on a reference to its value.
+
+```csharp
+//Good
+var stream = File.Create(path);
+var customers = new Dictionary();
+
+//Bad
+System.IO.FileStream stream = File.Create(path);
+Dictionary customers = new Dictionary();
+```
+
+  > Why: Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
 
 ```csharp
 public class ClientActivity
@@ -153,19 +183,6 @@ int index = int.Parse(input);
 ```
 
 **_Why: consistent with the Microsoft's .NET Framework and makes code more natural to read._**
-
-#### 10. Do use implicit type var for local variable declarations. Exception: primitive types (int, string, double, etc) use predefined names.
-
-```csharp
-var stream = File.Create(path);
-var customers = new Dictionary();
-// Exceptions
-int index = 100;
-string timeSheet;
-bool isCompleted;
-```
-
-**_Why: removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips._**
 
 #### 11. Do use noun or noun phrases to name a class.
 
