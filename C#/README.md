@@ -87,7 +87,24 @@ int index = int.Parse(input);
 
 > Why? Consistent with the Microsoft's .NET Framework and makes code more natural to read.
 
--[2.2](#types--complex) **Complex**: When you access a complex type you work on a reference to its value.
+-[2.2](#types--complex) **Complex**:
+
+-[2.2.1](#types--complex--naming) **Naming**:
+
+- Use plurals when declaring types with multiple sub types.
+
+```csharp
+var vowels = new char[] { 'a', 'e', 'i', 'o', 'u' }
+var cars = new List<Car>();
+```
+
+-[2.2.2](#types--complex--case) **Case**:
+
+Case sensitivity is the same as for primitive types.
+
+-[2.2.3](#types--complex--declaration) **Declaration**:
+
+Complex types are declared using a reference to their type.
 
 ```csharp
 //Good
@@ -99,11 +116,13 @@ System.IO.FileStream stream = File.Create(path);
 Dictionary customers = new Dictionary();
 ```
 
-> Why? Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
+> Why? Removes clutter, particularly with complex generic types and Visual Studio IDE makes determining types very easy.
 
 ## Namespaces
 
--[3.1](#namespaces--naming) **Naming**: Organize namespaces with a clearly defined hierarchy
+-[3.1](#namespaces--naming) **Naming**:
+
+Organize namespaces with a clearly defined hierarchy
 
 ```csharp
 // Examples
@@ -119,6 +138,25 @@ namespace Product.Layer.Module.Group
 ```
 
 ## Objects
+
+-[4.1](#objects--creation) **Creation**:
+
+Use object intialisers to simplify object creation.
+
+```csharp
+//Good
+var user = new User(){
+  FirstName = "Dirk",
+  LastName = "Mosters",
+  "Email" = "dirk@thedelta.io"
+};
+
+//Bad
+var user = new User();
+user.FirstName = "Dirk";
+user.LastName = "Mostert";
+user.Email = "dirk@thedelta.io";
+```
 
 ## Classes
 
