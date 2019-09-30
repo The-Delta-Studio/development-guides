@@ -183,6 +183,31 @@ Naming convention is the same as for Objects.
 
 Case sensitivity is the same as for Objects.
 
+-[5.3](#classes--membervariables) **Member Variables**:
+
+- All member variables are declared at the top of the class.
+- Static variables are declared at the very top.
+- The constructor of the class comes after the member variables.
+
+```csharp
+public class Account
+{
+  public static string BankName;
+  public static decimal Reserves;
+  public string Number { get; set; }
+  public DateTime DateOpened { get; set; }
+  public DateTime DateClosed { get; set; }
+  public decimal Balance { get; set; }
+
+  public Account()
+  {
+    // ...
+  }
+}
+```
+
+> Why? Generally accepted practice that prevents the need to hunt for variable declarations.
+
 ## Interfaces
 
 -[6.1](#interfaces--naming) **Naming**:
@@ -220,6 +245,22 @@ public interface iUserAssetholdingService() {}
 ```
 
 ## Identifiers
+
+-[7.1](#identifiers--naming) **Naming**
+
+- Do not use underscores when declaring public identifiers.
+- Private identifiers can be prefixed with an underscore.
+- Identifiers are declared using camelCase.
+
+```csharp
+//Good
+public DateTime clientAppointment;
+private string _clientName;
+//Bad
+public TimeSpan time_Left;
+```
+
+> Why? Consistent with the Microsoft's .NET Framework and makes code more natural to read (without 'slur'). Also avoids underline stress (inability to see underline).
 
 ## Abbreviations
 
