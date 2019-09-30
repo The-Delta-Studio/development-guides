@@ -4,6 +4,11 @@
 
 1. [Convention Table](#convention-table)
 2. [Types](#types)
+3. [Objects](#objects)
+4. [Classes](#classes)
+5. [Interfaces](#interfaces)
+6. [Declerations](#declerations)
+7. [Abbreviations](#abbreviations)
 
 ## Convetion Table
 
@@ -20,11 +25,10 @@
 | Delegate name    | PascalCase |    128 | No     | No     | Yes    | Yes          | [A-z]      | No          |
 | Enum type name   | PascalCase |    128 | Yes    | No     | No     | No           | [A-z]      | No          |
 
-#### 1. Do use PascalCasing for class names and method names:
 
 ## Types
 
--[1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+-[2.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
 
 ```csharp
 //Good
@@ -37,7 +41,7 @@ var index = 100;
 var timeSheet;
 ```
 
--[1.2](#types--complex) **Complex**: When you access a complex type you work on a reference to its value.
+-[2.2](#types--complex) **Complex**: When you access a complex type you work on a reference to its value.
 
 ```csharp
 //Good
@@ -49,7 +53,22 @@ System.IO.FileStream stream = File.Create(path);
 Dictionary customers = new Dictionary();
 ```
 
-  > Why: Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
+> Why: Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
+
+## Objects
+## Classes
+-[3.1](#classes--naming)
+
+
+## Interfaces
+## Declerations
+## Abbreviations
+
+
+
+
+
+#### 1. Do use PascalCasing for class names and method names:
 
 ```csharp
 public class ClientActivity
@@ -263,6 +282,13 @@ class Program
     //...
   }
 }
+```
+
+Add in single line return if
+
+```csharp
+  if(true)
+    return true;
 ```
 
 **_Why: Microsoft has a different standard, but developers have overwhelmingly preferred vertically aligned brackets._**
