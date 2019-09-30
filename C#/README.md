@@ -43,7 +43,7 @@
 - Multiple word primitive variables are declared in camelCase.
 - Do not use screaming caps (uppercase).
 
--[2.1.3](#types--primitives--deceleration) **Deceleration**:
+-[2.1.3](#types--primitives--declaration) **Declaration**:
 
 Primitive types are declared using their type and not a reference to their type.
 
@@ -58,7 +58,7 @@ var index = 100;
 var timeSheet;
 ```
 
-Do not use Hungarian notation or any type deceleration to declare primitive types.
+Do not use Hungarian notation or any type declaration to declare primitive types.
 
 ```csharp
 //Good
