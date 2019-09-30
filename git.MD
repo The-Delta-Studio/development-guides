@@ -68,6 +68,54 @@ Repositories follows the following guidelines:
 
 > Branching naming conventions and release strategies
 
+<table width="80%">
+    <tr>
+        <th>Type</th>
+        <th>Guideline</th>
+        <th>Description</th>
+        <th>Branch from</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>Feature</td>
+        <td>feature/ticket-number</td>
+        <td>A branch for the development of a new feature</td>
+        <td><code>develop</code></td>
+        <td><code>feature/VIA-181</code></td>
+    </tr>
+    <tr>
+        <td>Bugfix</td>
+        <td>fix/ticket-number</td>
+        <td>A branch for bugfixes</td>
+        <td>
+            <code>develop</code>
+            <code>staging</code>
+        </td>
+        <td><code>fix/VIA-192</code></td>
+    </tr>
+    <tr>
+        <td>Chore</td>
+        <td>chore/ticket-number</td>
+        <td>Good common housekeeping of repository</td>
+        <td><code>develop</code></td>
+        <td><code>chore/VIA-200</code></td>
+    </tr>
+    <tr>
+        <td>Hotfix</td>
+        <td>hotfix/ticket-number</td>
+        <td>Hotfixes after production release</td>
+        <td><code>master</code></td>
+        <td><code>hotfix/VIA-94</code></td>
+    </tr>
+     <tr>
+        <td>Release preparation</td>
+        <td>staging/ticket-number</td>
+        <td>Preparing develop for release</td>
+        <td><code>develop</code></td>
+        <td><code>staging/VIA-11</code></td>
+    </tr>
+</table>
+
 ## Versioning
 
 > Release versioning
