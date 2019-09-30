@@ -3,7 +3,6 @@
 The aim of this repository is to provide a guideline, from a code standards and helpful to-do, of the following
 
 - [x] [Front-End](./front-end.MD)
-- [ ] Back-End
-- [ ] Pipelines
-- [ ] Development Operations
+- [x] [Back-End](./back-end.MD)
 - [x] [Source Control](./git.MD)
+- [ ] CI/CD pipelines
