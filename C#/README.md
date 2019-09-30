@@ -34,15 +34,16 @@
 -[2.1.1](#types--primitives--naming) **Naming**:
 
 - Single word primitives are declared with no caps.
-- Multiple word primitives are declared as descriptive as possible.
+- Multiple word primitives are declared as descriptive as possible with meaningful names.
 - Boolean primitives are declared with the "any", "has" and "is" keywords
 
 -[2.1.2](#types--primitives--case) **Case**:
 
-- Single word primitive variables are declared with lower case
-- Multiple word primitive variables are declared in camelCase
+- Single word primitive variables are declared with lower case.
+- Multiple word primitive variables are declared in camelCase.
+- Do not use screaming caps (uppercase).
 
--[2.1.3](#types--primitives--decleration) **Decleration**:
+-[2.1.3](#types--primitives--deceleration) **Deceleration**:
 
 Primitive types are declared using their type and not a reference to their type.
 
@@ -56,6 +57,19 @@ bool isCompleted;
 var index = 100;
 var timeSheet;
 ```
+
+Do not use Hungarian notation or any type deceleration to declare primitive types.
+
+```csharp
+//Good
+int counter;
+string name;
+//Bad
+int iCounter;
+string strName;
+```
+
+> Why? Consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy.
 
 -[2.1.4](#types--primitives--access) **Access**:
 
@@ -85,7 +99,7 @@ System.IO.FileStream stream = File.Create(path);
 Dictionary customers = new Dictionary();
 ```
 
-> Why: Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
+> Why? Removes clutter, particularly with complex generic types. Type is easily detected with Visual Studio tooltips.
 
 ## Namespaces
 
