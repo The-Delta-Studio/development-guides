@@ -6,4 +6,4 @@ The aim of this repository is to provide a guideline, from a code standards and 
 - [ ] Back-End
 - [ ] Pipelines
 - [ ] Development Operations
-
+- [x] [Source Control](./git.MD)
