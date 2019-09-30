@@ -1,7 +1,10 @@
 # The Delta Studio Backend Style Guide
 
+## Table of Contents
 
+1. [Convention Table](#)
 
+## Convetion Table
 
 | Object Name      | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask  | Underscores |
 | :--------------- | :--------- | -----: | :----- | :----- | :----- | :----------- | :--------- | :---------- |
@@ -33,6 +36,8 @@ public class ClientActivity
 ```
 
 **_Why: consistent with the Microsoft's .NET Framework and easy to read._**
+
+**[⬆ back to top](#table-of-contents)**
 
 #### 2. Do use camelCasing for method arguments and local variables:
 
@@ -72,6 +77,8 @@ public const string SHIPPINGTYPE = "DropShip";
 ```
 
 **_Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention._**
+
+**[⬆ back to top](#table-of-contents)**
 
 #### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
 
@@ -126,6 +133,8 @@ private DateTime _registrationDate;
 
 **_Why: consistent with the Microsoft's .NET Framework and makes code more natural to read (without 'slur'). Also avoids underline stress (inability to see underline)._**
 
+**[⬆ back to top](#table-of-contents)**
+
 #### 9. Do use predefined type names (C# aliases) like `int`, `float`, `string` for local, parameter and member declarations. Do use .NET Framework names like `Int32`, `Single`, `String` when accessing the type's static members like `Int32.TryParse` or `String.Join`.
 
 ```csharp
@@ -174,6 +183,8 @@ public class DocumentCollection
 
 **_Why: consistent with the Microsoft's .NET Framework and easy to remember._**
 
+**[⬆ back to top](#table-of-contents)**
+
 #### 12. Do prefix interfaces with the letter I. Interface names are noun (phrases) or adjectives.
 
 ```csharp
@@ -221,6 +232,8 @@ namespace Product.Layer.Module.Group
 ```
 
 **_Why: consistent with the Microsoft's .NET Framework. Maintains good organization of your code base._**
+
+**[⬆ back to top](#table-of-contents)**
 
 #### 15. Do vertically align curly brackets:
 
@@ -286,6 +299,8 @@ public enum Dockings
 
 **_Why: consistent with the Microsoft's .NET Framework and makes the code more natural to read. Plural flags because enum can hold multiple values (using bitwise 'OR')._**
 
+**[⬆ back to top](#table-of-contents)**
+
 #### 18. Do not explicitly specify a type of an enum or values of enums (except bit fields):
 
 ```csharp
@@ -333,6 +348,8 @@ public enum Coin
 ```
 
 **_Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers._**
+
+**[⬆ back to top](#table-of-contents)**
 
 #### 20. Do not use "Flag" or "Flags" suffixes in enum type names:
 
@@ -392,6 +409,8 @@ private void MyFunction(string name, string Name)
 
 **_Why: consistent with the Microsoft's .NET Framework and easy to read, and also excludes possibility of occurrence of conflict situations._**
 
+**[⬆ back to top](#table-of-contents)**
+
 #### 24. DO use two parameters named sender and e in event handlers. The sender parameter represents the object that raised the event. The sender parameter is typically of type object, even if it is possible to employ a more specific type.
 
 ```csharp
@@ -433,3 +452,5 @@ public static bool IsNullOrEmpty(string value) {
 2. [DoFactory C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards)
 3. [MSDN Naming Guidelines](http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx)
 4. [MSDN Framework Design Guidelines](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+
+**[⬆ back to top](#table-of-contents)**
