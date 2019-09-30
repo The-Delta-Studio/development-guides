@@ -1,6 +1,8 @@
 # The Delta Studio Backend Style Guide
 
 
+
+
 | Object Name      | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask  | Underscores |
 | :--------------- | :--------- | -----: | :----- | :----- | :----- | :----------- | :--------- | :---------- |
 | Class name       | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9] | No          |

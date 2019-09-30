@@ -1,7 +1,6 @@
 # The Delta Studio Backend Style Guide
 
+Style guides
 
-
-Other Style guides
-
-- [C#](c#/)
+- [C#](C#/)
+- [NodeJS](NodeJS/)
