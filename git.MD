@@ -1,10 +1,10 @@
-# Source Control
+# Version Control
 
 Simple version control guideline
 
 ## Contents
 
-- [Source Control](#source-control)
+- [Version Control](#version-control)
   - [Contents](#contents)
   - [Repository](#repository)
   - [Branching](#branching)
