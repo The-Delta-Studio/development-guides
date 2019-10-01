@@ -49,6 +49,11 @@ Repositories follows the following guidelines:
         <td><code>via-app-marketing</code></td>
     </tr>
     <tr>
+        <td>Web Extension</td>
+        <td>project acronym - web - ext</td> 
+        <td><code>via-web-ext</code></td>
+    </tr>
+    <tr>
         <td>Mobile App</td>
         <td>project acronym - mob - type</td> 
         <td>
@@ -62,6 +67,18 @@ Repositories follows the following guidelines:
         <td>Serverless</td>
         <td>project acronym - func - action</td> 
         <td><code>via-func-email</code></td>
+    </tr>
+    <tr>
+        <td>Template</td>
+        <td>framework - action (if applicable) - type - template</td> 
+        <td>
+            <code>rn-mob-templat</code>
+            <code>react-web-app-template</code>
+            <code>gatsby-marketing-app-template</code>
+            <code>dotnet-service-template</code>
+            <code>dotnet-api-template</code>
+            <code>node-func-template</code>
+        </td>
     </tr>
 </table>
 
