@@ -483,7 +483,7 @@ public enum Dockings
 }
 ```
 
-> Why: Consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.
+> Why: Consistent with Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.
 
 ## Miscellaneous
 
@@ -517,62 +517,51 @@ if(number > 1)
 
 **[⬆ back to top](#table-of-contents)**
 
-#### 21. Do use suffix EventArgs at creation of the new classes comprising the information on event:
+-[11.3](#miscellaneous--eventargs) **EventArgs**:
+
+Use suffix EventArgs at creation of the new classes comprising the information on event.
 
 ```csharp
-// Correct
 public class BarcodeReadEventArgs : System.EventArgs
 {
 }
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
+> Why? Consistent with Microsoft's .NET Framework and easy to read.
 
-#### 22. Do name event handlers (delegates used as types of events) with the "EventHandler" suffix, as shown in the following example:
+-[11.4](#miscellaneous--event-handlers) **Event Handlers**:
+
+- Name event handlers (delegates used as types of events) with the "EventHandler" suffix.
 
 ```csharp
 public delegate void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e);
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
+> Why? Consistent with Microsoft's .NET Framework and easy to read.
 
-#### 23. Do not create names of parameters in methods (or constructors) which differ only by the register:
-
-```csharp
-// Avoid
-private void MyFunction(string name, string Name)
-{
-  //...
-}
-```
-
-**_Why: consistent with the Microsoft's .NET Framework and easy to read, and also excludes possibility of occurrence of conflict situations._**
-
-**[⬆ back to top](#table-of-contents)**
-
-#### 24. DO use two parameters named sender and e in event handlers. The sender parameter represents the object that raised the event. The sender parameter is typically of type object, even if it is possible to employ a more specific type.
+- Use two parameters named sender and e in event handlers. The sender parameter represents the object that raised the event. The sender parameter is typically of type object, even if it is possible to employ a more specific type.
 
 ```csharp
 public void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e)
 {
-  //...
 }
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework_**
+> Why? Consistent with Microsoft's .NET Framework
 
-**_Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers._**
+-[11.5](#miscellaneous--exceptions) **Exceptions**:
 
-#### 25. Do use suffix Exception at creation of the new classes comprising the information on exception:
+Use suffix Exception at creation of the new classes comprising the information of the exception.
 
 ```csharp
-// Correct
 public class BarcodeReadException : System.Exception
 {
 }
 ```
 
-**_Why: consistent with the Microsoft's .NET Framework and easy to read._**
+> Why? Consistent with Microsoft's .NET Framework and easy to read.
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Resources
 
