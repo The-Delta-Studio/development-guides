@@ -72,7 +72,7 @@ Repositories follows the following guidelines:
         <td>Template</td>
         <td>framework - action (if applicable) - type - template</td> 
         <td>
-            <code>rn-mob-templat</code>
+            <code>rn-mob-template</code>
             <code>react-web-app-template</code>
             <code>gatsby-marketing-app-template</code>
             <code>dotnet-service-template</code>
