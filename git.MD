@@ -25,42 +25,43 @@ Repositories follows the following guidelines:
     </tr>
     <tr>
         <td>API</td>
-        <td>project acronym - action - api</td> 
-        <td><code>via-scrape-api</code></td>
+        <td>project acronym - api - action</td> 
+        <td><code>via-api-scrape</code></td>
     </tr>
     <tr>
         <td>Service</td>
-        <td>project acronym - action - service</td> 
-        <td><code>via-auth-service</code></td>
+        <td>project acronym - service - action</td> 
+        <td><code>via-service-auth</code></td>
     </tr>
     <tr>
         <td>Web App</td>
-        <td>project acronym - web - app</td> 
-        <td><code>via-web-app</code></td>
+        <td>project acronym - app - web</td> 
+        <td><code>via-app-web</code></td>
     </tr>
     <tr>
         <td>Admin App</td>
-        <td>project acronym - admin - app</td> 
-        <td><code>via-admin-app</code></td>
+        <td>project acronym - app - admin</td> 
+        <td><code>via-app-admin</code></td>
     </tr>
     <tr>
         <td>Marketing Web App</td>
-        <td>project acronym - marketing - app</td> 
-        <td><code>via-marketing-app</code></td>
+        <td>project acronym - app - marketing</td> 
+        <td><code>via-app-marketing</code></td>
     </tr>
     <tr>
         <td>Mobile App</td>
-        <td>project acronym - type - mob</td> 
+        <td>project acronym - mob - type</td> 
         <td>
-            <code>via-rn-mob</code>
-            <code>via-android-mob</code>
-            <code>via-ios-mob</code>
+            <code>via-mob-rn</code>
+            <code>via-mob-android</code>
+            <code>via-mob-ios</code>
+            <code>via-mob-pwa</code>
         </td>
     </tr>
     <tr>
         <td>Serverless</td>
-        <td>project acronym - action - func</td> 
-        <td><code>via-email-func</code></td>
+        <td>project acronym - func - action</td> 
+        <td><code>via-func-email</code></td>
     </tr>
 </table>
 

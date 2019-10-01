@@ -1,4 +1,4 @@
-# The Delta Studio standards
+# The Delta Studio Standards
 
 The aim of this repository is to provide a guideline, from a code standards and helpful to-do, of the following
 
