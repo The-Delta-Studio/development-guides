@@ -1,4 +1,4 @@
-# The Delta Studio Backend Style Guide
+# The Delta Studio Backend C# Style Guide
 
 ## Table of Contents
 
