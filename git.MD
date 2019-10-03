@@ -138,6 +138,8 @@ Repositories follows the following guidelines:
 
 > Release versioning
 
+
+
 ## PR
 
 > Pull requests, commit messages, commit sizes, reviewers and code checks
