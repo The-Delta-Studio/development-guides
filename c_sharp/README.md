@@ -150,9 +150,9 @@ namespace Product.Layer.Module.Group
 
 - Single word objects are named with an uppercase.
 - Multiple word objects are declared as descriptive as possible with meaningful names.
-- User noune or noun phrases to name an object.
+- User noun or noun phrases to name an object.
 
--[4.2](@objects--case) **Case**:
+-[4.2](#objects--case) **Case**:
 
 Use PascalCase when naming objects.
 
@@ -485,9 +485,60 @@ public enum Dockings
 
 > Why: Consistent with Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.
 
+## Exceptions
+
+-[11.1](#exceptions--naming) **Naming**:
+
+All custom made exceptions must have the suffix Exception on the end of the name.
+
+'''csharp
+// Good
+public class TradeException : Exception
+{
+}
+
+// Bad
+public class TradeError : Exception
+{
+}
+'
+
+> Why? Consistent with the Microsoft's .NET Framework and is easy to read.
+
+-[11.2](#exceptions--case) **Case**:
+
+Case must match the case rules for classes.
+
+-[11.3](#exceptions--constructors) **Constructors**:
+
+All custom exception classes must have three constructors as shown below:
+
+'''csharp
+// Good
+public class EmployeeListNotFoundException : Exception
+{
+    public EmployeeListNotFoundException()
+    {
+    }
+
+    public EmployeeListNotFoundException(string message)
+        : base(message)
+    {
+    }
+
+    public EmployeeListNotFoundException(string message, Exception inner)
+        : base(message, inner)
+    {
+    }
+}
+'
+> Why? Consistent with the Microsoft's .NET Framework and makes it easy to instantiate an exception for a multitude of scenarios.
+
+**[⬆ back to top](#table-of-contents)**
+
 ## Miscellaneous
 
--[11.1](#miscellaneous--brackets) **Vertical Allign Brackets**:
+-[12.1](#miscellaneous--brackets) **Vertical Allign Brackets**:
 
 ```csharp
 //Good
@@ -504,7 +555,7 @@ public class TradeException : Exception { public TradeException(string msg) : ba
 
 > Why? Developers have overwhelmingly preferred vertically aligned brackets.
 
--[11.2](#miscellaneous--if) **Ifs with one return**:
+-[12.2](#miscellaneous--if) **Ifs with one return**:
 
 Single line return if if statement has only one line.
 
@@ -517,7 +568,7 @@ if(number > 1)
 
 **[⬆ back to top](#table-of-contents)**
 
--[11.3](#miscellaneous--eventargs) **EventArgs**:
+-[12.3](#miscellaneous--eventargs) **EventArgs**:
 
 Use suffix EventArgs at creation of the new classes comprising the information on event.
 
@@ -529,7 +580,7 @@ public class BarcodeReadEventArgs : System.EventArgs
 
 > Why? Consistent with Microsoft's .NET Framework and easy to read.
 
--[11.4](#miscellaneous--event-handlers) **Event Handlers**:
+-[12.4](#miscellaneous--event-handlers) **Event Handlers**:
 
 - Name event handlers (delegates used as types of events) with the "EventHandler" suffix.
 
@@ -549,7 +600,7 @@ public void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e)
 
 > Why? Consistent with Microsoft's .NET Framework
 
--[11.5](#miscellaneous--exceptions) **Exceptions**:
+-[12.5](#miscellaneous--exceptions) **Exceptions**:
 
 Use suffix Exception at creation of the new classes comprising the information of the exception.
 
@@ -563,11 +614,52 @@ public class BarcodeReadException : System.Exception
 
 **[⬆ back to top](#table-of-contents)**
 
+## Linq
+
+-[13.1](#linq--methodology) **Methodology**
+
+When using linq the extension methods are preferred.
+
+'''csharp
+// Good
+var seattleCustomers = customers.where(c => c.City == "Seattle")
+							.Select(c => c.Name)
+							.ToList();
+
+// Bad 
+var seattleCustomers = from customer in customers
+					   where customer.City == "Seattle"
+					   select customer.Name;
+'
+
+> Why? The linq extensions become far easier to use and follow with more complicated queries.
+
+-[13.2](#linq--formatting) **Formatting**
+
+Each extension method of a linq query must be on a new line for readability. 
+
+'''csharp
+// Good
+var seattleCustomers = customers.where(c => c.City == "Seattle")
+							.Select(c => c.Name)
+							.OrderByDescending(c => c.Name)
+							.ToList();
+
+// Bad 
+var seattleCustomers = customers.where(c => c.City == "Seattle").Select(c => c.Name).OrderByDescending(c => c.Name)
+								.ToList();
+'
+
+>Why? This makes the linq expression far easier to read and understand what it is doing
+
+**[⬆ back to top](#table-of-contents)**
+
 ## Resources
 
 1. [MSDN General Naming Conventions](<http://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx>)
 2. [DoFactory C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards)
 3. [MSDN Naming Guidelines](http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx)
 4. [MSDN Framework Design Guidelines](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+5. [Best practices for exceptions](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions)
 
 **[⬆ back to top](#table-of-contents)**
