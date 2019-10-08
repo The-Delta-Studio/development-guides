@@ -138,7 +138,17 @@ Repositories follows the following guidelines:
 
 > Release versioning
 
+Software versions will follow [semantic versioning](https://semver.org/)
 
+A brief overview:
+
+```
+MAJOR.MINOR.PATCH
+```
+
+1. MAJOR version when you make incompatible API changes
+2. MINOR version when you add functionality in a backwards compatible manner
+3. PATCH version when you make backwards compatible bug fixes
 
 ## PR
 
