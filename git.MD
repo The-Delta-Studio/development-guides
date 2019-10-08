@@ -10,6 +10,7 @@ Simple version control guideline
   - [Branching](#branching)
   - [Versioning](#versioning)
   - [PR](#pr)
+    - [Pull Requests](#pull-requests)
 
 ## Repository
 
@@ -154,3 +155,21 @@ MAJOR.MINOR.PATCH
 
 > Pull requests, commit messages, commit sizes, reviewers and code checks
 
+### Pull Requests
+
+> Pull requests let you tell others about changes you've pushed to a branch in a repository. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+
+Pull requests is an important step in the development process. It ensures:
+
+1. Good code quality
+2. Sharing of knowledge among team members
+
+The above two is only achievable if Pull Requests are enforced by the team according to the rules and requirements the team has specified.
+
+Each team needs to specify their rules for the following, but to provide some guidelines follow the link associated to each topic:
+
+- [Pull Request structure](./pr.MD)
+- Commit Messages
+- Commit Size
+- Default Reviewers
+- Code Checks
