@@ -168,7 +168,7 @@ The above two is only achievable if Pull Requests are enforced by the team accor
 
 Each team needs to specify their rules for the following, but to provide some guidelines follow the link associated to each topic:
 
-- [Pull Request structure](./pr.MD)
+- [Pull Request structure](./version/pr.MD)
 - Commit Messages
 - Commit Size
 - Default Reviewers
