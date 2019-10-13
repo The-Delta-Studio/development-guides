@@ -170,6 +170,6 @@ Each team needs to specify their rules for the following, but to provide some gu
 
 - [Pull Request structure](./version/pr.MD)
 - [Commit Messages](./version/commit_message.MD)
-- Commit Size
+- [Commit Size](./version/commit_size.MD)
 - Default Reviewers
 - Code Checks
