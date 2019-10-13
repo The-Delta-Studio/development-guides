@@ -7,7 +7,7 @@
 When working on a feature, bugfix, hotfix or any other code related work. It is important to keep to a code commit:
 
 - Related to the feature, bugfix or hotfix
-- Keep the code commits small
+- Small and concise
 
 The reason for these two are, with following proper branching strategies, you keep all work independent of the whole of the project. This makes it much easier to trace the origin of issues, and empowers teams to find and fix issues quickly.
 
