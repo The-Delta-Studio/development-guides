@@ -4,7 +4,7 @@
 
 ### Code commit
 
-When working on a feature, bugfix, hotfix or any other code related work. It is important to keep to commit:
+When working on a feature, bugfix, hotfix or any other code related work. It is important to keep to a code commit:
 
 - Related to the feature, bugfix or hotfix
 - Keep the code commits small
