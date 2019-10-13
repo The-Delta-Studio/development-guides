@@ -9,11 +9,11 @@ The most important reason to write descriptive commit messages is so that, when 
 - You have a complex problem under a tight deadline
 - You have numerous bugs to fix under a tight deadline, and the commit message will not cover the scope of the changes (remedy for this is to make smaller commits)
 
-So in essence the scenario normally goes like this:
+A frequent scenario normally plays out like this:
 
 - You find a bug that is because of a strange line of code
 - You use version control to figure out who the commit author was, and when the line of code was modified
-- The author of the commit is off on holiday or has gone home for the night, and left a commit message saying "fixed an obsucre bug"
+- The author of the commit is off on holiday or has gone home for the night, and left a commit message saying "fixed an obscure bug"
 - You modify the line of code to what you believe the fix is
 - Something else breaks
 - You spend hours trying to get the application running again
