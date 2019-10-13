@@ -157,7 +157,7 @@ MAJOR.MINOR.PATCH
 
 ### Pull Requests
 
-> Pull requests let you tell others about changes you've pushed to a branch in a repository. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+> Pull requests are essential to any development team. They are made when you want to merge you code changes into a develop or production branch. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the destination branch.
 
 Pull requests is an important step in the development process. It ensures:
 
