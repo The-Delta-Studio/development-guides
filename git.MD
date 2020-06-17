@@ -81,6 +81,13 @@ Repositories follows the following guidelines:
             <code>node-func-template</code>
         </td>
     </tr>
+    <tr>
+        <td>Background worker</td>
+        <td>project acronym - worker - area</td> 
+        <td>
+            <code>yoma-worker-ssi</code>
+        </td>
+    </tr>
 </table>
 
 ## Branching
