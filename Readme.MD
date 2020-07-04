@@ -1,9 +1,13 @@
-# The Delta Studio Standards
+# The Delta Studio Engineering Department Guide
 
-The aim of this repository is to provide a guideline, from a code standards and helpful to-do, of the following
+*Home to all documentation required to become familiar with The Delta Studio Engineering department processis, standards, and tools.*
 
-- [x] [Front-End](./front-end.MD)
-- [x] [Back-End](./back-end.MD)
-- [ ] Serverless
-- [x] [Version Control](./git.MD)
-- [ ] CI/CD pipelines
+### Table of Contence
+
+- [Guide to Frontend](./front-end.MD)
+- [Guide to Backend](./back-end/Readme.MD)
+- [Version Control](./git.MD)
+- Serverless
+- CI/CD pipelines
+
+___
