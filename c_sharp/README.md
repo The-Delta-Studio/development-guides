@@ -1,4 +1,6 @@
-# The Delta Studio Backend Style Guide
+# The Delta Studio Backend C# Style Guide
+
+*A 'C# the Delta way' guide inspired by common best practices.*
 
 ## Table of Contents
 
