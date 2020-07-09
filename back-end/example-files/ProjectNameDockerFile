@@ -1,0 +1,28 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
+
+WORKDIR /build
+COPY ./ProjectNameApiCore/ProjectNameApiCore.csproj ./
+
+RUN dotnet restore
+COPY ProjectNameApiCore .
+RUN dotnet publish --output /api/ --configuration Release
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+
+# There is a problem with the version of wkhtmltopdf in the Debian/Ubuntu
+# repos. Grab a specific version from github and install that instead.
+WORKDIR /tmp
+RUN curl -OL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.buster_amd64.deb \
+  && dpkg -i wkhtmltox_0.12.5-1.buster_amd64.deb || true \
+  && apt-get update && apt-get -f install -y \
+  && rm -rf /var/lib/apt/lists/* /tmp/*
+
+WORKDIR /api
+COPY --from=builder /api .
+
+# The pugpdf package tries to use its own wkhtmltopdf binary which we _dont want_.
+# Trick it into running our own version.
+RUN ln -sf /usr/local/bin/wkhtmltopdf ./wkhtmltopdf/linux/x64
+
+EXPOSE 5000
+CMD ["dotnet", "ProjectNameApiCore.dll"]

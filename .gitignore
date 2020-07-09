@@ -1,0 +1,10 @@
+### DotnetCore ###
+
+# Debugging files
+
+bin/
+obj/
+
+# Visual Studio generated files
+
+.vs/
