@@ -69,6 +69,6 @@ Package to handle PDFs, in particular HTML to PDF conversions.
 
 ##### Additional
 
-- Example docker [file](/example-files/YomaDockerFile) with Pug PDF issue fixes contained.
+- Example docker [file](/example-files/ProjectNameDockerFile) with Pug PDF issue fixes contained.
 
 ___

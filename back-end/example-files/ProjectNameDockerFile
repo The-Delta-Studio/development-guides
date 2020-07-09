@@ -1,10 +1,10 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
 
 WORKDIR /build
-COPY ./YomaApiCore/YomaApiCore.csproj ./
+COPY ./ProjectNameApiCore/ProjectNameApiCore.csproj ./
 
 RUN dotnet restore
-COPY YomaApiCore .
+COPY ProjectNameApiCore .
 RUN dotnet publish --output /api/ --configuration Release
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
@@ -25,4 +25,4 @@ COPY --from=builder /api .
 RUN ln -sf /usr/local/bin/wkhtmltopdf ./wkhtmltopdf/linux/x64
 
 EXPOSE 5000
-CMD ["dotnet", "YomaApiCore.dll"]
+CMD ["dotnet", "ProjectNameApiCore.dll"]
