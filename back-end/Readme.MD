@@ -7,8 +7,9 @@
 *Commonly used templates developed and maintained by employees of The Delta Studio.*
 
 - [Dotnet core 3.1 C# API](https://github.com/The-Delta-Studio/tds-dotnet-core-3.1-api-template)
-- [Dotnet core 2.1 C# API](https://github.com/The-Delta-Studio/tds-api-template)
-- [Dotnet core AWS Lambda function](https://github.com/The-Delta-Studio/tds-func-lambda-di-ef-template)
+- [Dotnet core 2.2 C# API](https://github.com/The-Delta-Studio/tds-api-template)
+- [Dotnet core AWS Lambda function with dipendancy injection](https://github.com/The-Delta-Studio/tds-func-lambda-di-ef-template)
+- [Dotnet core AWS Lambda function](https://github.com/The-Delta-Studio/tds-func-lambda-template)
 
 ## Style guides
 
@@ -35,12 +36,12 @@ Swagger is a API documentation handler that helps generate usefull API documenta
 
 #### [Sendgrid](https://sendgrid.com/)
 
-Integratable email distrobution service enable our APIs to send emails with dynamically populated data. 
+Integratable email distribution service enable our APIs to send emails with dynamically populated data. 
 
 ##### Notes/Lessons
 
 1. **DELAYED SENDING:** Emails can sometime be quite delayed which may cause issues.
-2. **ACCOUNT WARMUP:** Accounts need to be 'warmed up'. This is done by sending multible small batches of emails over a period of days. The purpose of this is to prevent the 'account' being blocked by email providers (when larger volumes of emails are sent) causing emails to not reach the intended recipients.
+2. **ACCOUNT WARMUP:** Accounts need to be 'warmed up'. This is done by sending multiple small batches of emails over a period of days. The purpose of this is to prevent the 'account' being blocked by email providers (when larger volumes of emails are sent) causing emails to not reach the intended recipients.
 
 ##### Aditional
 
@@ -56,7 +57,7 @@ A framework that allows tasks or processes to be offloaded to background procces
 
 #### [Retool](https://docs.retool.com/docs)
 
-A tool that can be used to quickly and easerly create a Frontend that can interact with an API or database. Often used to create admin portals.
+A tool that can be used to quickly and easily create a Frontend that can interact with an API or database. Often used to create admin portals.
 
 #### [PugPdf](https://www.npmjs.com/package/pug-pdf)
 
