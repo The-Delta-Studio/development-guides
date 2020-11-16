@@ -19,15 +19,15 @@
 
 ## Commonly used tools
 
-*Tools often used at The Delta with devepor notes and documentation compiled and derived from extensive use.*
+*Tools often used at The Delta with developer notes and documentation compiled and derived from extensive use.*
 
 #### [Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-3.1&tabs=visual-studio)
 
-ASP.NET Core package that supports user handeling. Manages users, passwords, profile data, roles, claimes, ect.
+ASP.NET Core package that supports user handling. Manages users, passwords, profile data, roles, claims, ect.
 
 #### [Swagger](https://swagger.io/solutions/api-documentation/)
 
-Swagger is a API documentation handler that helps generate usefull API documentation dirrectly from the API code.
+Swagger is an API documentation handler that helps generate useful API documentation dirrectly from the API code.
 
 ##### Aditional
 
